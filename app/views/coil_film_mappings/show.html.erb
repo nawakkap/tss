@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Coil:</b>
+  <%= @coil_film_mapping.coil_id %>
+</p>
+
+<p>
+  <b>Coil lot no:</b>
+  <%= @coil_film_mapping.coil_lot_no %>
+</p>
+
+<p>
+  <b>Po:</b>
+  <%= @coil_film_mapping.po_id %>
+</p>
+
+<p>
+  <b>Film:</b>
+  <%= @coil_film_mapping.film_id %>
+</p>
+
+<p>
+  <b>Slit spec:</b>
+  <%= @coil_film_mapping.slit_spec_id %>
+</p>
+
+<p>
+  <b>Slit sub no:</b>
+  <%= @coil_film_mapping.slit_sub_no %>
+</p>
+
+<p>
+  <b>Coil group code:</b>
+  <%= @coil_film_mapping.coil_group_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_coil_film_mapping_path(@coil_film_mapping) %> |
+<%= link_to 'Back', coil_film_mappings_path %>

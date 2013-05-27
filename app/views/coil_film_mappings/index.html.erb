@@ -1,0 +1,35 @@
+<h1>Listing coil_film_mappings</h1>
+
+<table>
+  <tr>
+    <th>Coil</th>
+    <th>Coil lot no</th>
+    <th>Po</th>
+    <th>Film</th>
+    <th>Slit spec</th>
+    <th>Slit sub no</th>
+    <th>Coil group code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @coil_film_mappings.each do |coil_film_mapping| %>
+  <tr>
+    <td><%= coil_film_mapping.coil_id %></td>
+    <td><%= coil_film_mapping.coil_lot_no %></td>
+    <td><%= coil_film_mapping.po_id %></td>
+    <td><%= coil_film_mapping.film_id %></td>
+    <td><%= coil_film_mapping.slit_spec_id %></td>
+    <td><%= coil_film_mapping.slit_sub_no %></td>
+    <td><%= coil_film_mapping.coil_group_code %></td>
+    <td><%= link_to 'Show', coil_film_mapping %></td>
+    <td><%= link_to 'Edit', edit_coil_film_mapping_path(coil_film_mapping) %></td>
+    <td><%= link_to 'Destroy', coil_film_mapping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Coil film mapping', new_coil_film_mapping_path %>

@@ -1,5 +1,11 @@
 <%= link_to "Tss", root_path, :class => 'brand' %>
 <ul class="nav">
+		<li>
+			<%= link_to 'Coils', coils_path %>
+		</li>
+		<li>
+			<%= link_to 'Film', films_path %>
+		</li>
   <% if user_signed_in? %>
     <li>
     <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>

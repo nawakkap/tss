@@ -1,0 +1,43 @@
+<h1>Listing films</h1>
+
+<table>
+  <tr>
+    <th>Film</th>
+    <th>Thickness</th>
+    <th>Width</th>
+    <th>Weight</th>
+    <th>Unit</th>
+    <th>Film status</th>
+    <th>Product dtl</th>
+    <th>Slit date</th>
+    <th>Populate flag</th>
+    <th>Populate date</th>
+    <th>Film price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @films.each do |film| %>
+  <tr>
+    <td><%= film.film_id %></td>
+    <td><%= film.thickness %></td>
+    <td><%= film.width %></td>
+    <td><%= film.weight %></td>
+    <td><%= film.unit %></td>
+    <td><%= film.film_status %></td>
+    <td><%= film.product_dtl_id %></td>
+    <td><%= film.slit_date %></td>
+    <td><%= film.populate_flag %></td>
+    <td><%= film.populate_date %></td>
+    <td><%= film.film_price %></td>
+    <td><%= link_to 'Show', film %></td>
+    <td><%= link_to 'Edit', edit_film_path(film) %></td>
+    <td><%= link_to 'Destroy', film, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Film', new_film_path %>

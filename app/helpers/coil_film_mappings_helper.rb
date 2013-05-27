@@ -1,0 +1,2 @@
+module CoilFilmMappingsHelper
+end

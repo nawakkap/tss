@@ -1,0 +1,17 @@
+<%= simple_form_for(@coil_film_mapping) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :coil_id %>
+    <%= f.input :coil_lot_no %>
+    <%= f.input :po_id %>
+    <%= f.input :film_id %>
+    <%= f.input :slit_spec_id %>
+    <%= f.input :slit_sub_no %>
+    <%= f.input :coil_group_code %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

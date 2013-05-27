@@ -1,0 +1,21 @@
+<%= simple_form_for(@film) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :film_id %>
+    <%= f.input :thickness %>
+    <%= f.input :width %>
+    <%= f.input :weight %>
+    <%= f.input :unit %>
+    <%= f.input :film_status %>
+    <%= f.input :product_dtl_id %>
+    <%= f.input :slit_date %>
+    <%= f.input :populate_flag %>
+    <%= f.input :populate_date %>
+    <%= f.input :film_price %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

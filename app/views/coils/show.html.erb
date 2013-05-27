@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Coil:</b>
+  <%= @coil.coil_id %>
+</p>
+
+<p>
+  <b>Coil lot no:</b>
+  <%= @coil.coil_lot_no %>
+</p>
+
+<p>
+  <b>Po:</b>
+  <%= @coil.po_id %>
+</p>
+
+<p>
+  <b>Thickness:</b>
+  <%= @coil.thickness %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @coil.width %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @coil.weight %>
+</p>
+
+<p>
+  <b>Coil received date:</b>
+  <%= @coil.coil_received_date %>
+</p>
+
+<p>
+  <b>Coil status:</b>
+  <%= @coil.coil_status %>
+</p>
+
+
+<%= link_to 'Edit', edit_coil_path(@coil) %> |
+<%= link_to 'Back', coils_path %>
