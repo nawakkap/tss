@@ -2,14 +2,20 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :coil_id %>
-    <%= f.input :coil_lot_no %>
-    <%= f.input :po_id %>
-    <%= f.input :thickness %>
-    <%= f.input :width %>
-    <%= f.input :weight %>
-    <%= f.input :coil_received_date %>
-    <%= f.input :coil_status %>
+    <%= f.input :coil_id, :readonly => true %>
+    <%= f.input :coil_lot_no, :readonly => true %>
+    <%= f.input :po_id, :readonly => true %>
+    <%= f.input :thickness, :readonly => true %>
+    <%= f.input :width, :readonly => true %>
+    <%= f.input :weight, :readonly => true %>
+		<%= f.input :coil_received_date, :readonly => true, :as => :datepicker %>
+    <%= f.input :coil_status, :readonly => true %>
+		<%= f.input :actual_slitted_date %>
+    <%= f.input :time %>
+		<%= f.label :machine%>
+    <%= f.select :machine, options_for_select([["N/A",""], ["สลิตเตอร์ กะเช้า", "10"], ["สลิตเตอร์ กะดึก", "20"]], @coil.machine) %>
+    <%= f.label :remark%>
+		<%= f.text_area :remark, :size => "300x12" %>
   </div>
 
   <div class="form-actions">

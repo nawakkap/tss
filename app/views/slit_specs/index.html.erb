@@ -1,0 +1,39 @@
+<h1>Listing slit_specs</h1>
+
+<table>
+  <tr>
+    <th>Slit spec</th>
+    <th>Slit sub no</th>
+    <th>Slit thickness</th>
+    <th>Slit qty</th>
+    <th>Slit width</th>
+    <th>Product dtl</th>
+    <th>Remark</th>
+    <th>Ratio</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @slit_specs.each do |slit_spec| %>
+  <tr>
+    <td><%= slit_spec.slit_spec_id %></td>
+    <td><%= slit_spec.slit_sub_no %></td>
+    <td><%= slit_spec.slit_thickness %></td>
+    <td><%= slit_spec.slit_qty %></td>
+    <td><%= slit_spec.slit_width %></td>
+    <td><%= slit_spec.product_dtl_id %></td>
+    <td><%= slit_spec.remark %></td>
+    <td><%= slit_spec.ratio %></td>
+    <td><%= slit_spec.type %></td>
+    <td><%= link_to 'Show', slit_spec %></td>
+    <td><%= link_to 'Edit', edit_slit_spec_path(slit_spec) %></td>
+    <td><%= link_to 'Destroy', slit_spec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Slit spec', new_slit_spec_path %>

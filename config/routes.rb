@@ -1,11 +1,21 @@
 Tss::Application.routes.draw do
+  resources :products
+
+
+  resources :slit_specs
+
+
   resources :films
 
 
   resources :coil_film_mappings
 
 
-  resources :coils
+  resources :coils do
+    collection do
+      get 'to_slitter'
+    end
+  end
 
 
   authenticated :user do

@@ -1,0 +1,2 @@
+module SlitSpecsHelper
+end

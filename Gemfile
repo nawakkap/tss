@@ -28,3 +28,4 @@ gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 #My added gems
 gem "mysql2"
 gem "composite_primary_keys"
+gem 'jquery-ui-rails'

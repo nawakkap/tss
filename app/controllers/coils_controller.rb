@@ -2,8 +2,7 @@ class CoilsController < ApplicationController
   # GET /coils
   # GET /coils.json
   def index
-    #@coils = Coil.past3month
-    @coils = Coil.slitted_n_days(2)
+    @coils = Coil.past3month
     
     respond_to do |format|
       format.html # index.html.erb
@@ -81,4 +80,16 @@ class CoilsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # GET /coils/to_slitter
+  # GET /coils/to_slitter.json
+  def to_slitter
+    @coils = Coil.slitted_n_days(2)
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @coils }
+    end
+  end
+  
 end

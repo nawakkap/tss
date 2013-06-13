@@ -1,0 +1,33 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :product_dtl_id %>
+    <%= f.input :product_display_id %>
+    <%= f.input :product_name_en %>
+    <%= f.input :product_name_th %>
+    <%= f.input :product_name_initial %>
+    <%= f.input :color %>
+    <%= f.input :size_detail %>
+    <%= f.input :thickness %>
+    <%= f.input :thickness_min %>
+    <%= f.input :thickness_rep %>
+    <%= f.input :film_size %>
+    <%= f.input :est_weight %>
+    <%= f.input :est_weight_min %>
+    <%= f.input :actual_weight %>
+    <%= f.input :accounting_weight %>
+    <%= f.input :piece_per_pack %>
+    <%= f.input :piece_per_truck %>
+    <%= f.input :wage_per_kilo %>
+    <%= f.input :weight_display %>
+    <%= f.input :in_production %>
+    <%= f.input :perct_of_films %>
+    <%= f.input :default_vat %>
+    <%= f.input :product_type %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

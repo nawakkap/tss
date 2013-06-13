@@ -1,10 +1,7 @@
 <%= link_to "Tss", root_path, :class => 'brand' %>
 <ul class="nav">
 		<li>
-			<%= link_to 'Coils', coils_path %>
-		</li>
-		<li>
-			<%= link_to 'Film', films_path %>
+			<%= link_to 'Coils', to_slitter_coils_path %>
 		</li>
   <% if user_signed_in? %>
     <li>
